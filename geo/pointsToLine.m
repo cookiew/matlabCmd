@@ -1,10 +1,10 @@
-function abc = pointToLine(p1,p2,ctr)
-% INPUT: ctr is a point that decides positive half plane
+function abc = pointsToLine(p1,p2,ctr)
+% INPUT: ctr is a point that decides negative half plane
 % OUTPUT: [a;b;c], a*x+b*y+c = 0
 %         -- [a,b] is normalized
-%         -- [a,b] points to the opposite side of the ctr (if given)
+%         -- vector [a,b] points to the opposite side of the ctr (if given)
 
-if norm(p1(1)-p2(1))<1e-3
+if norm(p1(1)-p2(1))<1e-6
     b = 0; a = -1; c = p1(1);
 else
     bb = 1; aa = -(p1(2)-p2(2))/(p1(1) - p2(1)); 

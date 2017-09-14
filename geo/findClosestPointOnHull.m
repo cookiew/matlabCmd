@@ -4,7 +4,7 @@ function [result, p] = findClosestPointOnHull(pt, hull)
 %       pt: 2-d point of interest
 % output: 
 %       result: if the point is inside hull
-%       p : closest point on hull edges to p of interest
+%       p : closest point on hull edges to pt 
 
 p = zeros(2,1);
 % if point inside hull
